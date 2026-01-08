@@ -1,0 +1,14 @@
+Metadata-Version: 2.4
+Name: my_cyber_project
+Version: 0.0.0
+Requires-Dist: dagster
+Requires-Dist: dagster-webserver
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: duckdb
+Requires-Dist: python-dotenv
+Provides-Extra: dev
+Requires-Dist: dagster-webserver; extra == "dev"
+Requires-Dist: pytest; extra == "dev"
+Dynamic: provides-extra
+Dynamic: requires-dist

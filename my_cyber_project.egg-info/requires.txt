@@ -1,0 +1,10 @@
+dagster
+dagster-webserver
+pandas
+requests
+duckdb
+python-dotenv
+
+[dev]
+dagster-webserver
+pytest

@@ -1,0 +1,11 @@
+
+
+1. cd " "
+2. git init
+3. git remote add origin https://...
+4. git add .
+git commit -m "commentaires"
+5. git push -u origin main
+
+API NVD : 0b8c8a4e-9aa7-4273-818d-95aeb692a216 (mis dans .env)
+API AbuseIPDB : 8c9edee8aaa2ddea16928d49220149bc7a1502652f3921e6c941491ddfb1b7c3dc8d4386ab88bcab (mis dans .env)

@@ -1,0 +1,24 @@
+data/*.db
+
+# Environnement virtuel (pour ne pas envoyer des Gigas de fichiers inutiles)
+venv/
+.env
+
+# Python (fichiers de cache)
+__pycache__/
+*.py[cod]
+
+# Dagster (fichiers locaux de stockage)
+storage/
+*.db
+
+# OS (fichiers système inutiles)
+.DS_Store
+Thumbs.db
+
+.env
+venv/
+__pycache__/
+*.pyc
+data/cyber_data.db
+.dagster/
