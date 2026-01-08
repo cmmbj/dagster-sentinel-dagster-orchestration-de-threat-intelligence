@@ -1,15 +1,18 @@
-Sentinel #1 : Pipeline d'Automated Threat Intelligence
+#Sentinel #1 : Pipeline d'Automated Threat Intelligence
+
 Projet Bachelor Cybersécurité - ESILV
 
-PRESENTATION
+#PRESENTATION
 Sentinel #1 est une plateforme d'orchestration de données de sécurité (SOAR light)
 conçue pour automatiser la veille sur les vulnérabilités et la réputation IP.
 Le système collecte, filtre et centralise les menaces critiques pour assister
 les analystes SOC dans leur prise de décision.
 
-ARCHITECTURE DU PROJET
+###ARCHITECTURE DU PROJET
 
-Arborescence des fichiers
+##Arborescence des fichiers
+
+```
 
 my-cyber-project/
 ├── .env                      # Secrets et clés API
@@ -26,7 +29,9 @@ my-cyber-project/
     ├── sensors.py            # Automatisation et logique d'alerte
     └── definitions.py        # Point d'entrée de l'orchestrateur
 
-ROLE DES COMPOSANTS
+```
+
+###ROLE DES COMPOSANTS
 
 .env
 Stockage sécurisé des variables d'environnement (Clés NIST, AbuseIPDB)
@@ -46,7 +51,7 @@ Base de données relationnelle stockant l'historique des menaces qualifiées
 verify_my_data.py
 Permet une lecture directe des données sans passer par l'orchestrateur
 
-PIPELINE DE DONNEES
+###PIPELINE DE DONNEES
 
 1. Ingestion
 Récupération des données brutes depuis les API NIST et AbuseIPDB
@@ -62,21 +67,30 @@ Injection sécurisée dans DuckDB pour l'analyse SOC
 Un capteur détecte la réussite du stockage et lance instantanément
 une procédure d'alerte
 
-INSTALLATION ET LANCEMENT
+###INSTALLATION ET LANCEMENT
 
-Configuration
+#Configuration
+
+```
+
 Créer un fichier .env à la racine :
 
 NIST_API_KEY=votre_cle
 ABUSEIPDB_API_KEY=votre_cle
 
-Déploiement
+```
+
+#Déploiement
+
+```
 
 pip install -e .
 PYTHONPATH = "."
 python -m dagster dev -m my_cyber_project.definitions
 
-CONCLUSION : VALEUR POUR L'EXPERT CYBER
+```
+
+###CONCLUSION : VALEUR POUR L'EXPERT CYBER
 
 Réduction du MTTR (Mean Time To Respond)
 L'automatisation permet d'identifier une menace critique en quelques secondes
@@ -88,4 +102,4 @@ Scalabilité
 L'architecture modulaire permet l'ajout de nouvelles sources de menaces
 sans complexifier le système existant
 
-Développé par un étudiant en Bachelor Cybersécurité - ESILV
+Développé par Camille MBIANDJI en Bachelor Cybersécurité - ESILV (avec l'aide de Gemini Pro)
