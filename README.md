@@ -1,18 +1,18 @@
-#Sentinel #1 : Pipeline d'Automated Threat Intelligence
+# Sentinel #1 : Pipeline d'Automated Threat Intelligence
 
 Projet Bachelor Cybersécurité - ESILV
 
-#PRESENTATION
+# PRESENTATION
 Sentinel #1 est une plateforme d'orchestration de données de sécurité (SOAR light)
 conçue pour automatiser la veille sur les vulnérabilités et la réputation IP.
 Le système collecte, filtre et centralise les menaces critiques pour assister
 les analystes SOC dans leur prise de décision.
 
-###ARCHITECTURE DU PROJET
+### ARCHITECTURE DU PROJET
 
-##Arborescence des fichiers
+## Arborescence des fichiers
 
-```
+```bash
 
 my-cyber-project/
 ├── .env                      # Secrets et clés API
@@ -31,7 +31,7 @@ my-cyber-project/
 
 ```
 
-###ROLE DES COMPOSANTS
+### ROLE DES COMPOSANTS
 
 .env
 Stockage sécurisé des variables d'environnement (Clés NIST, AbuseIPDB)
@@ -51,7 +51,9 @@ Base de données relationnelle stockant l'historique des menaces qualifiées
 verify_my_data.py
 Permet une lecture directe des données sans passer par l'orchestrateur
 
-###PIPELINE DE DONNEES
+### PIPELINE DE DONNEES
+
+```bash
 
 1. Ingestion
 Récupération des données brutes depuis les API NIST et AbuseIPDB
@@ -67,11 +69,13 @@ Injection sécurisée dans DuckDB pour l'analyse SOC
 Un capteur détecte la réussite du stockage et lance instantanément
 une procédure d'alerte
 
-###INSTALLATION ET LANCEMENT
-
-#Configuration
-
 ```
+
+### INSTALLATION ET LANCEMENT
+
+# Configuration
+
+```bash
 
 Créer un fichier .env à la racine :
 
@@ -80,9 +84,9 @@ ABUSEIPDB_API_KEY=votre_cle
 
 ```
 
-#Déploiement
+# Déploiement
 
-```
+```bash
 
 pip install -e .
 PYTHONPATH = "."
@@ -90,7 +94,7 @@ python -m dagster dev -m my_cyber_project.definitions
 
 ```
 
-###CONCLUSION : VALEUR POUR L'EXPERT CYBER
+### CONCLUSION : VALEUR POUR L'EXPERT CYBER
 
 Réduction du MTTR (Mean Time To Respond)
 L'automatisation permet d'identifier une menace critique en quelques secondes
