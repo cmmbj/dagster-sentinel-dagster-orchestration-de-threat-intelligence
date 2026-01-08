@@ -12,7 +12,7 @@ les analystes SOC dans leur prise de décision.
 
 ## Arborescence des fichiers
 
-```bash
+```
 
 my-cyber-project/
 ├── .env                      # Secrets et clés API
@@ -53,7 +53,7 @@ Permet une lecture directe des données sans passer par l'orchestrateur
 
 ### PIPELINE DE DONNEES
 
-```bash
+```
 
 1. Ingestion
 Récupération des données brutes depuis les API NIST et AbuseIPDB
@@ -75,7 +75,7 @@ une procédure d'alerte
 
 # Configuration
 
-```bash
+```
 
 Créer un fichier .env à la racine :
 
@@ -86,7 +86,7 @@ ABUSEIPDB_API_KEY=votre_cle
 
 # Déploiement
 
-```bash
+```
 
 pip install -e .
 PYTHONPATH = "."
